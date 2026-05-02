@@ -3,101 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Орбіта Місяця на CSS3</title>
+    <title>Bootstrap сайт</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background: radial-gradient(circle at center, #1b2735, #090a0f);
+            background: #0d1117;
             color: white;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
         }
 
-        .space {
-            height: 100vh;
+        .hero {
+            padding: 100px 0;
             text-align: center;
         }
 
-        h1 {
-            padding-top: 30px;
+        .card {
+            transition: 0.3s;
         }
 
-        .orbit {
-            position: relative;
-            width: 700px;
-            height: 500px;
-            margin: 30px auto;
+        .card:hover {
+            transform: scale(1.05);
         }
 
-        .earth {
-            position: absolute;
-            top: 170px;
-            left: 270px;
-            font-size: 150px;
-            z-index: 1;
-        }
-
-        .moon {
-            position: absolute;
-            top: 220px;
-            left: 320px;
-            font-size: 60px;
-            z-index: 0;
-            animation: orbita 5s linear infinite;
-        }
-
-        @keyframes orbita {
-            0% {
-                top: 220px;
-                left: 320px;
-                font-size: 50px;
-                z-index: 0;
-                transform: rotate(0deg);
-            }
-
-            25% {
-                top: 90px;
-                left: 540px;
-                font-size: 65px;
-                z-index: 2;
-            }
-
-            50% {
-                top: 230px;
-                left: 320px;
-                font-size: 90px;
-                z-index: 2;
-            }
-
-            75% {
-                top: 390px;
-                left: 70px;
-                font-size: 65px;
-                z-index: 0;
-            }
-
-            100% {
-                top: 220px;
-                left: 320px;
-                font-size: 50px;
-                z-index: 0;
-                transform: rotate(360deg);
-            }
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #111;
         }
     </style>
 </head>
+
 <body>
 
-<main class="space">
-    <h1>Анімація орбіти Місяця навколо Землі</h1>
-
-    <div class="orbit">
-        <div class="earth">🌍</div>
-        <div class="moon">🌕</div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">My Site</a>
     </div>
-</main>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <h1>Мій Bootstrap сайт 🚀</h1>
+        <p>Адаптивна верстка з анімацією</p>
+        <button class="btn btn-primary">Кнопка</button>
+    </div>
+</section>
+
+<!-- CARDS -->
+<div class="container mb-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card p-3 text-dark">
+                <h5>Блок 1</h5>
+                <p>Опис першого блоку</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-dark">
+                <h5>Блок 2</h5>
+                <p>Опис другого блоку</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card p-3 text-dark">
+                <h5>Блок 3</h5>
+                <p>Опис третього блоку</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- VIDEO -->
+<div class="container mb-5 text-center">
+    <h2>Відео</h2>
+    <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Мій сайт
+</div>
 
 </body>
 </html>
