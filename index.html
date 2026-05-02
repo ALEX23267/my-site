@@ -4,7 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Орбіта Місяця на CSS3</title>
-    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle at center, #1b2735, #090a0f);
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .space {
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            padding-top: 30px;
+        }
+
+        .orbit {
+            position: relative;
+            width: 700px;
+            height: 500px;
+            margin: 30px auto;
+        }
+
+        .earth {
+            position: absolute;
+            top: 170px;
+            left: 270px;
+            font-size: 150px;
+            z-index: 1;
+        }
+
+        .moon {
+            position: absolute;
+            top: 220px;
+            left: 320px;
+            font-size: 60px;
+            z-index: 0;
+            animation: orbita 5s linear infinite;
+        }
+
+        @keyframes orbita {
+            0% {
+                top: 220px;
+                left: 320px;
+                font-size: 50px;
+                z-index: 0;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                top: 90px;
+                left: 540px;
+                font-size: 65px;
+                z-index: 2;
+            }
+
+            50% {
+                top: 230px;
+                left: 320px;
+                font-size: 90px;
+                z-index: 2;
+            }
+
+            75% {
+                top: 390px;
+                left: 70px;
+                font-size: 65px;
+                z-index: 0;
+            }
+
+            100% {
+                top: 220px;
+                left: 320px;
+                font-size: 50px;
+                z-index: 0;
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
 
